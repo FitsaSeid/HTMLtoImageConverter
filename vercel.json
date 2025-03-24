@@ -1,5 +1,14 @@
 {
     "version": 2,
-    "builds": [{ "src": "./index.js", "use": "@vercel/node" }],
-    "routes": [{ "src": "/(.*)", "dest": "/" }]
-    }
+    "builds": [
+      { "src": "api/html-to-image.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      {
+        "src": "/html-to-image",
+        "methods": ["POST"],
+        "dest": "api/html-to-image.js"
+      }
+    ]
+  }
+  
