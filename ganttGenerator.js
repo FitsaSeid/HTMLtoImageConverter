@@ -320,7 +320,7 @@ function GeneratedGanttChart1(data) {
           >
             <div"
                  style="
-                   font-size:14px;
+                   font-size:11px;
                    color:#000000;
                    line-height:1.2; 
                    display:flex; 
@@ -436,8 +436,204 @@ function GeneratedGanttChart1(data) {
   `;
   return html;
 }
+function generateWeekByWeekHTMLWithDistinctItemColors(data) {
+  const stageMap = {};
+  const allItems = [];
+
+  data.forEach((item) => {
+    const stage = item.Stage || 0;
+    if (!stageMap[stage]) {
+      stageMap[stage] = [];
+    }
+    stageMap[stage].push(item);
+    allItems.push(item);
+  });
+
+  const sortedStages = Object.keys(stageMap)
+    .map((x) => parseInt(x, 10))
+    .sort((a, b) => a - b);
+
+  let minWeek = Infinity;
+  let maxWeek = -Infinity;
+  allItems.forEach((i) => {
+    if (i.WeekFrom < minWeek) minWeek = i.WeekFrom;
+    if (i.WeekTo > maxWeek) maxWeek = i.WeekTo;
+  });
+  if (minWeek === Infinity) {
+    return "<h3>No valid items</h3>";
+  }
+
+  const colorPalette = ["#41bbda", "#49c9ea", "#078db0"];
+
+  let itemIndex = 0;
+  allItems.forEach((item) => {
+    if (!item.color) {
+      item.color = colorPalette[itemIndex % colorPalette.length];
+      itemIndex++;
+    }
+  });
+
+  let rowsHTML = "";
+
+  sortedStages.forEach((st) => {
+    const intervals = stageMap[st] || [];
+    const deliverableSet = new Set();
+    intervals.forEach((it) => {
+      deliverableSet.add(it.Deliverable || " ");
+    });
+    const deliverableHTML = [...deliverableSet]
+      .map((d) => `<div>${d}</div>`)
+      .join("");
+
+    let weekCells = "";
+    for (let w = minWeek; w <= maxWeek; w++) {
+      const itemsThisWeek = intervals.filter(
+        (it) => it.WeekFrom <= w && it.WeekTo >= w
+      );
+
+      if (!itemsThisWeek.length) {
+        weekCells += `
+            <td style="
+              border:1px solid #ccc; 
+              width:30px;
+              height:30px;
+            ">
+            </td>
+          `;
+      } else {
+        let boxesHTML = "";
+        itemsThisWeek.forEach((it) => {
+          boxesHTML += `
+              <div style="
+                margin-top:5px;
+                margin-bottom:5px;
+                padding:2px;
+                background: ${it.color};
+                width:auto; 
+                font-size:0; 
+                line-height:4;
+                height:18px; 
+              ">
+              
+              </div>
+            `;
+        });
+
+        weekCells += `
+            <td style="
+              border:1px solid #ccc; 
+              width:30px;
+              vertical-align:top;
+              padding:2px;
+            ">
+              ${boxesHTML}
+            </td>
+          `;
+      }
+    }
+
+    rowsHTML += `
+        <tr>
+          <td style="
+            border:1px solid #ccc;
+            padding:8px;
+            vertical-align:middle;
+            text-align: left;
+            width:200px;
+          ">
+            <div style="margin-top:6px;">
+              ${deliverableHTML}
+            </div>
+          </td>
+          ${weekCells}
+        </tr>
+      `;
+  });
+
+  return `
+
+  <html style="margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+        font-size: 11px;
+        background:#ffffff;
+    >
+  <head>
+    <meta charset="UTF-8" />
+    <title>Week-by-Week Distinct Item Colors</title>
+    <style>
+      html, body {
+        
+      }
+      table.gantt-table th,
+      table.gantt-table td {
+        border:1px solid #ccc;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body style="margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+        font-size:11px;
+        background:#ffffff;>
+    <div style=" min-width:1000px; width: 100%;
+        margin:20px auto;
+        padding:10px;
+        overflow-x:auto;">
+      <table style="border-collapse:collapse;
+        width:auto;">
+        <thead>
+          <tr>
+            <th colspan="${1 + (maxWeek - minWeek + 1)}" style="
+              background:#001f5f;
+              font-weight:bold;
+              text-align:center;
+              color: #ffffff"
+              padding:8px;
+            ">
+            Timeline (${data[0]?.TimeUnit} ${minWeek} to ${maxWeek})
+            </th>
+          </tr>
+          <tr>
+            <th style="
+              width:200px;
+              background:#001f5f;
+              text-align:left;
+              padding:4px;
+              font-weight:bold;
+            ">Deliverable</th>
+            ${Array.from({ length: maxWeek - minWeek + 1 }, (_, i) => {
+              const w = minWeek + i;
+              return `
+                  <th style="
+                    background:#001f5f;
+                    min-width:30px;
+                    text-align:center;
+                    font-weight:bold;
+                    color: #ffffff"
+                    padding:4px;
+                  ">
+                    ${w}
+                  </th>
+                `;
+            }).join("")}
+          </tr>
+        </thead>
+        <tbody>
+          ${rowsHTML}
+        </tbody>
+      </table>
+    </div>
+  </body>
+  </html>
+    `;
+}
 
 module.exports = {
   GeneratedGanttChart1,
   GeneratedGanttChart2,
+  generateWeekByWeekHTMLWithDistinctItemColors,
 };

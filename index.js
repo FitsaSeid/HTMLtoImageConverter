@@ -12,7 +12,10 @@ app.post("/html-to-image", async (req, res) => {
   if (chartType == 1) {
     html = generateCustomGanttHTML.GeneratedGanttChart1(data);
   } else if (chartType == 2) {
-    html = generateCustomGanttHTML.GeneratedGanttChart2(data);
+    html =
+      generateCustomGanttHTML.generateWeekByWeekHTMLWithDistinctItemColors(
+        data
+      );
   } else {
     html = "<p>No valid chart type selected.</p>";
   }
