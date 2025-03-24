@@ -376,7 +376,6 @@ function GeneratedGanttChart1(data) {
   }
 
   const html = `
-  <!DOCTYPE html>
   <html style="margin:0; 
         padding:0; 
         box-sizing:border-box;
