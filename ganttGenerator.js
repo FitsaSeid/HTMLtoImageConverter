@@ -132,8 +132,8 @@ function GeneratedGanttChart2(data) {
                 margin:2px 0;
                 padding:2px;
                 background: ${color};
-                width:auto; /* fill container horizontally */
-                font-size:0; /* no text, so we make it small? or 0 so no text */
+                width:auto; 
+                font-size:0; 
                 line-height:1;
                 height:18px; 
               ">
@@ -178,29 +178,15 @@ function GeneratedGanttChart2(data) {
   const tbodyHTML = `<tbody>${tbodyRows}</tbody>`;
 
   const html = `
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <style>
-      html, body {
-        margin:0;
+  <html style="margin:0;
         padding:0;
         box-sizing:border-box;
         font-family:Arial, sans-serif;
         background:#fff;
         color: #111;
-        width:1000px;
-      }
-      .gantt-wrapper {
-        width:100%;
-        margin:20px auto;
-        padding:10px;
-        overflow-x:auto; /* horizontally scroll if many weeks */
-      }
-      table.gantt-table {
-        border-collapse: collapse;
-        width:auto;
-      }
+        width:1000px;">
+  <head>
+    <style>
       table.gantt-table th {
         border:1px solid #ccc;
         background:#001f5f;
@@ -212,9 +198,19 @@ function GeneratedGanttChart2(data) {
       }
     </style>
   </head>
-  <body>
-    <div class="gantt-wrapper">
-      <table class="gantt-table">
+  <body style="margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+        background:#fff;
+        color: #111;
+        width:1000px;">
+    <div style="width:100%;
+        margin:20px auto;
+        padding:10px;
+        overflow-x:auto; ">
+      <table style="border-collapse: collapse;
+        width:auto;">
         ${theadHTML}
         ${tbodyHTML}
       </table>
@@ -381,25 +377,17 @@ function GeneratedGanttChart1(data) {
 
   const html = `
   <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset="UTF-8" />
-    <style>
-      html, body {
-        margin:0; 
+  <html style="margin:0; 
         padding:0; 
         box-sizing:border-box;
         font-family: Arial, sans-serif;
         background:#ffff;
         width:1000px;
-        height:100%;
-      }
-      .gantt-wrapper {
-        width:100%;
-        margin:20px auto;
-        padding:10px;
-        overflow-x:auto;
-      }
+        height:100%;">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+
       table.gantt-table {
         width:100%;
         border-collapse: collapse;
@@ -414,9 +402,20 @@ function GeneratedGanttChart1(data) {
       }
     </style>
   </head>
-  <body>
-    <div class="gantt-wrapper">
-      <table class="gantt-table">
+  <body style="margin:0; 
+        padding:0; 
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+        background:#ffff;
+        width:1000px;
+        height:100%;">
+    <div style="width:100%;
+        margin:20px auto;
+        padding:10px;
+        overflow-x:auto;">
+      <table style=" width:100%;
+        border-collapse: collapse;
+        table-layout: fixed; ">
         <thead>
           <tr>
             <th style="width:200px;">Deliverable</th>
