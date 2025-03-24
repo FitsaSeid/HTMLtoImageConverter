@@ -558,10 +558,10 @@ function generateWeekByWeekHTMLWithDistinctItemColors(data) {
         font-family:Arial, sans-serif;
         font-size: 11px;
         background:#ffffff;
+        Width: 100%
     >
   <head>
-    <meta charset="UTF-8" />
-    <title>Week-by-Week Distinct Item Colors</title>
+
     <style>
       html, body {
         
@@ -584,7 +584,7 @@ function generateWeekByWeekHTMLWithDistinctItemColors(data) {
         padding:10px;
         overflow-x:auto;">
       <table style="border-collapse:collapse;
-        width:auto;">
+        ">
         <thead>
           <tr>
             <th colspan="${1 + (maxWeek - minWeek + 1)}" style="
@@ -601,16 +601,18 @@ function generateWeekByWeekHTMLWithDistinctItemColors(data) {
             <th style="
               width:200px;
               background:#001f5f;
+              color: #ffffff;
               text-align:left;
               padding:4px;
               font-weight:bold;
             ">Deliverable</th>
             ${Array.from({ length: maxWeek - minWeek + 1 }, (_, i) => {
               const w = minWeek + i;
+              console.log(100 / (maxWeek - minWeek));
               return `
                   <th style="
                     background:#001f5f;
-                    min-width:30px;
+                    width: ${80 / (maxWeek - minWeek)}%;
                     text-align:center;
                     font-weight:bold;
                     color: #ffffff"
@@ -624,7 +626,7 @@ function generateWeekByWeekHTMLWithDistinctItemColors(data) {
         </thead>
         <tbody>
           ${rowsHTML}
-        </tbody>
+        </tbody> 
       </table>
     </div>
   </body>
