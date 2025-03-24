@@ -44,7 +44,8 @@ function GeneratedGanttChart2(data) {
       <tr>
         <th colspan="${totalCols}" style="
           background: #001f5f;
-          color: #fff;
+          color: #ffffff;
+          font-size: 11px;
           font-weight: bold;
           text-align: center;
           padding: 8px;
@@ -59,9 +60,8 @@ function GeneratedGanttChart2(data) {
       width:200px;
       border:1px solid #ccc;
       background:#001f5f;
-      color: #fff;
-      padding:4px;
-      font-weight:bold;
+      color: #ffffff;
+      font-size: 11px;
       text-align:left;
     ">Deliverable</th>`;
 
@@ -71,9 +71,8 @@ function GeneratedGanttChart2(data) {
           border:1px solid #ccc;
           background:#001f5f;
           min-width:30px;
-          text-align:center;
-          font-weight:bold;
-          padding:4px;
+          text-align:left;
+          color: #ffffff
         ">
           ${w}
         </th>
@@ -112,17 +111,17 @@ function GeneratedGanttChart2(data) {
           `;
       } else {
         const coverage = itemsThisWeek.length;
-        let color = "#fff";
+        let color = "#ffffff";
         if (coverage === 1) {
-          color = "rgba(73,201,234,0.5)";
+          color = "#41bbda";
         } else if (coverage === 2) {
-          color = "rgba(73,201,234,0.7)";
+          color = "#49c9ea";
         } else if (coverage === 3) {
-          color = "rgba(73,201,234,0.7)";
+          color = "#49c9ea";
         } else if (coverage === 4) {
-          color = "rgba(73,201,234,0.9)";
+          color = "#49c9ea";
         } else {
-          color = "rgba(73,201,234,1.0)";
+          color = "#41bbda";
         }
 
         let boxesHTML = "";
@@ -137,7 +136,7 @@ function GeneratedGanttChart2(data) {
                 line-height:1;
                 height:18px; 
               ">
-                <!-- no label -->
+
               </div>
             `;
         }
@@ -182,15 +181,18 @@ function GeneratedGanttChart2(data) {
         padding:0;
         box-sizing:border-box;
         font-family:Arial, sans-serif;
-        background:#fff;
-        color: #111;
-        width:1000px;">
+        font-size: 11px;
+        background:#ffffff;
+        color: #111111;
+        width:100%;
+        min-width: 1000px
+        ">
   <head>
     <style>
       table.gantt-table th {
         border:1px solid #ccc;
         background:#001f5f;
-        color: #fff;
+        color: #ffffff;
       }
       table.gantt-table td {
         border:1px solid #ccc;
@@ -202,9 +204,10 @@ function GeneratedGanttChart2(data) {
         padding:0;
         box-sizing:border-box;
         font-family:Arial, sans-serif;
-        background:#fff;
-        color: #111;
-        width:1000px;">
+        background:#ffffff;
+        color: #111111;
+        width: 100%;
+        min-width:1000px;">
     <div style="width:100%;
         margin:20px auto;
         padding:10px;
@@ -302,7 +305,7 @@ function GeneratedGanttChart1(data) {
             y="0"
             width="${barW}"
             height="${SVG_HEIGHT - 4}"
-            fill="rgba(73,201,234,0.8)"
+            fill="#49c9ea"
           >
             <title>${Deliverable} (${barLabel})</title>
           </rect>
@@ -315,10 +318,10 @@ function GeneratedGanttChart1(data) {
             width="${Math.max(barW - 4, 1)}"
             height="${SVG_HEIGHT - 4}"
           >
-            <div xmlns="http://www.w3.org/1999/xhtml"
+            <div"
                  style="
                    font-size:14px;
-                   color:#000;
+                   color:#000000;
                    line-height:1.2; 
                    display:flex; 
                    align-items:center; 
@@ -344,7 +347,7 @@ function GeneratedGanttChart1(data) {
           width="100%"
           height="${SVG_HEIGHT}"
           viewBox="0 0 ${SVG_WIDTH} ${SVG_HEIGHT}"
-          style="background:#fff"
+          style="background:#ffffff"
         >
           ${svgContent}
         </svg>
@@ -381,7 +384,8 @@ function GeneratedGanttChart1(data) {
         box-sizing:border-box;
         font-family: Arial, sans-serif;
         background:#ffff;
-        width:1000px;
+        width: 100%;
+        min-width:1000px;
         height:100%;">
   <head>
     <meta charset="UTF-8" />
@@ -406,7 +410,8 @@ function GeneratedGanttChart1(data) {
         box-sizing:border-box;
         font-family: Arial, sans-serif;
         background:#ffff;
-        width:1000px;
+        width:100%;
+        min-width: 1000px;
         height:100%;">
     <div style="width:100%;
         margin:20px auto;
