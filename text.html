@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        background: #fff;
+        color: #111;
+        width: 1000px;
+      }
+
+      .gantt-wrapper {
+        width: 100%;
+        margin: 20px auto;
+        padding: 10px;
+        overflow-x: auto;
+        /* horizontally scroll if many weeks */
+      }
+
+      table.gantt-table {
+        border-collapse: collapse;
+        width: auto;
+      }
+
+      table.gantt-table th {
+        border: 1px solid #ccc;
+        background: #001f5f;
+        color: #fff;
+      }
+
+      table.gantt-table td {
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="gantt-wrapper">
+      <table class="gantt-table">
+        <thead>
+          <tr>
+            <th
+              colspan="21"
+              style="
+                background: #001f5f;
+                color: #fff;
+                font-weight: bold;
+                text-align: center;
+                padding: 8px;
+                border: 1px solid #ccc;
+              "
+            >
+              Timeline Week 2 to 21
+            </th>
+          </tr>
+          <tr>
+            <th
+              style="
+                width: 200px;
+                border: 1px solid #ccc;
+                background: #001f5f;
+                color: #fff;
+                padding: 4px;
+                font-weight: bold;
+                text-align: left;
+              "
+            >
+              Deliverable
+            </th>
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              2
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              3
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              4
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              5
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              6
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              7
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              8
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              9
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              10
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              11
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              12
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              13
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              14
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              15
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              16
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              17
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              18
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              19
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              20
+            </th>
+
+            <th
+              style="
+                border: 1px solid #ccc;
+                background: #001f5f;
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+                padding: 4px;
+              "
+            >
+              21
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              style="
+                border: 1px solid #ccc;
+                padding: 8px;
+                vertical-align: middle;
+                text-align: left;
+                width: 200px;
+              "
+            >
+              <div style="margin-top: 6px">
+                <div>Stage 1</div>
+                <div>Stage 2</div>
+              </div>
+            </td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td
+              style="
+                border: 1px solid #ccc;
+                padding: 8px;
+                vertical-align: middle;
+                text-align: left;
+                width: 200px;
+              "
+            >
+              <div style="margin-top: 6px">
+                <div>Stage 2</div>
+              </div>
+            </td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.7);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.7);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td
+              style="
+                border: 1px solid #ccc;
+                padding: 8px;
+                vertical-align: middle;
+                text-align: left;
+                width: 200px;
+              "
+            >
+              <div style="margin-top: 6px">
+                <div></div>
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.7);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.7);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.7);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.7);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.7);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.7);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td
+              style="
+                border: 1px solid #ccc;
+                width: 30px;
+                vertical-align: top;
+                padding: 2px;
+              "
+            >
+              <div
+                style="
+                  margin: 2px 0;
+                  padding: 2px;
+                  background: rgba(73, 201, 234, 0.5);
+                  width: auto; /* fill container horizontally */
+                  font-size: 0; /* no text, so we make it small? or 0 so no text */
+                  line-height: 1;
+                  height: 18px;
+                "
+              >
+                <!-- no label -->
+              </div>
+            </td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+
+            <td style="border: 1px solid #ccc; width: 30px; height: 30px"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

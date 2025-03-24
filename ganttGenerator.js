@@ -114,11 +114,11 @@ function GeneratedGanttChart2(data) {
         const coverage = itemsThisWeek.length;
         let color = "#fff";
         if (coverage === 1) {
-          color = "rgba(73,201,234,0.3)";
+          color = "rgba(73,201,234,0.5)";
         } else if (coverage === 2) {
-          color = "rgba(73,201,234,0.5)";
+          color = "rgba(73,201,234,0.7)";
         } else if (coverage === 3) {
-          color = "rgba(73,201,234,0.5)";
+          color = "rgba(73,201,234,0.7)";
         } else if (coverage === 4) {
           color = "rgba(73,201,234,0.9)";
         } else {
@@ -301,15 +301,13 @@ function GeneratedGanttChart1(data) {
       const barW = x2 - x1;
 
       svgContent += `
-          <!-- The bar rectangle -->
           <rect
             x="${x1}"
             y="0"
             width="${barW}"
             height="${SVG_HEIGHT - 4}"
-            fill="rgba(73,201,234,0.6)"
+            fill="rgba(73,201,234,0.8)"
           >
-            <!-- Tooltip -->
             <title>${Deliverable} (${barLabel})</title>
           </rect>
         `;
@@ -405,7 +403,7 @@ function GeneratedGanttChart1(data) {
       table.gantt-table {
         width:100%;
         border-collapse: collapse;
-        table-layout: fixed; /* keeps first col at 200px, rest expands */
+        table-layout: fixed; 
       }
       table.gantt-table th {
         background:#001f5f;

@@ -1,6 +1,5 @@
 const express = require("express");
 const puppeteer = require("puppeteer");
-require("dotenv").config();
 
 const generateCustomGanttHTML = require("./ganttGenerator");
 const app = express();
@@ -21,16 +20,14 @@ app.post("/html-to-image", async (req, res) => {
   if (!html) {
     return res.status(400).json({ error: "Missing HTML input" });
   }
+  res.setHeader("Content-Type", "text/html");
+  res.send(html);
 
+  /*
   try {
     const browser = await puppeteer.launch({
       headless: "new",
-      args: [
-        "--no-sandbox",
-        "--disable-setuid-sandbox",
-        "--single-process",
-        "--no-zygote",
-      ],
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 
     const page = await browser.newPage();
@@ -46,7 +43,7 @@ app.post("/html-to-image", async (req, res) => {
   } catch (error) {
     console.error("Error generating image:", error);
     res.status(500).json({ error: "Image generation failed." });
-  }
+  }*/
 });
 
 const PORT = process.env.PORT || 3000;
