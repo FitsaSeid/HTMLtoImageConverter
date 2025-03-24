@@ -613,8 +613,7 @@ function generateWeekByWeekHTMLWithDistinctItemColors(data) {
               return `
                   <th style="
                     background:#001f5f;
-            
-                    width: 50px;
+                    min-width: 30px;
                     text-align:center;
                     font-weight:bold;
                     color: #ffffff"
