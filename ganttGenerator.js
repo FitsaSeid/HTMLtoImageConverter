@@ -505,6 +505,7 @@ function generateWeekByWeekHTMLWithDistinctItemColors(data) {
         itemsThisWeek.forEach((it) => {
           boxesHTML += `
               <div style="
+             gap:10;
                 margin-top:5px;
                 margin-bottom:5px;
                 padding:2px;
@@ -612,7 +613,8 @@ function generateWeekByWeekHTMLWithDistinctItemColors(data) {
               return `
                   <th style="
                     background:#001f5f;
-                    width: ${80 / (maxWeek - minWeek)}%;
+            
+                    width: 50px;
                     text-align:center;
                     font-weight:bold;
                     color: #ffffff"
