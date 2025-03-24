@@ -9,8 +9,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@sparticuz/chromium": "^133.0.0",
     "body-parser": "^1.20.3",
+    "chrome-aws-lambda": "^10.1.0",
     "express": "^4.21.2",
-    "puppeteer": "^24.4.0"
+    "puppeteer": "^24.4.0",
+    "puppeteer-core": "^10.4.0"
   }
 }
